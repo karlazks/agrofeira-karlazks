@@ -90,3 +90,59 @@ p {
   color: var(--cor-texto-suave);
   padding: var(--espaco-3);
 }
+
+/* Lista de produtos */
+
+.lista-produtos {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Cartão */
+
+.cartao-produto {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: var(--espaco-3);
+  margin-bottom: var(--espaco-3);
+  max-width: 30rem;
+}
+
+/* Legenda da figura */
+
+.figura-destaque figcaption {
+  color: var(--cor-texto-suave);
+  margin-top: var(--espaco-1);
+}
+
+/* Campo de busca */
+
+.busca input {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 0.5em;
+  background-color: var(--cor-superficie);
+}
+
+/* Os dois botões do site */
+
+.busca button,
+.formulario-cadastro button {
+  background-color: var(--cor-marca);
+  color: var(--cor-sobre-marca);
+  border: none;
+  border-radius: var(--raio);
+  padding: 0.5em 1em;
+}
+
+/* Aviso */
+
+.aviso {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-marca);
+  border-radius: var(--raio);
+  padding: var(--espaco-3);
+  max-width: 68ch;
+}
