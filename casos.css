@@ -1,4 +1,11 @@
 /* Caso 1 */
+/* Previsão: o <strong> dentro do .aviso fica na cor da marca.
+   Motivo: .aviso strong tem especificidade (0,1,1) [classe + tag];
+   strong tem (0,0,1) [só tag]. O mais específico vence. */
+/* Conferido: o painel mostrou .aviso strong vencendo e strong
+   riscada. O "Atenção:" ficou em terracota (--cor-marca). A
+   previsão acertou. */
+
 .aviso strong {
   color: var(--cor-marca);
 }
@@ -8,6 +15,14 @@ strong {
 }
 
 /* Caso 2 */
+/* Previsão: o label dentro de .busca fica na cor do texto suave.
+   Motivo: .busca label tem especificidade (0,1,1) [classe + tag];
+   label[for] também tem (0,1,1) [atributo + tag]. Como a
+   especificidade é igual, a regra que aparece por último vence. */
+/* Conferido: o painel mostrou label[for] vencendo e .busca label
+   riscada. O rótulo "Procurar produto" ficou em --cor-texto-suave.
+   A previsão acertou. */
+
 .busca label {
   color: var(--cor-marca);
 }
@@ -17,6 +32,18 @@ label[for] {
 }
 
 /* Caso 3 */
+/* Previsão: o texto dentro do .rodape-site fica na cor da marca.
+   Motivo: .rodape-site tem especificidade (0,1,0) [classe];
+   footer p tem (0,0,2) [duas tags]. A classe vence porque 1 em b
+   é mais importante que qualquer quantidade de elementos em c. */
+/* Conferido: o <p> do rodapé ficou em --cor-marca, mas não pela
+   disputa que previ. O painel mostrou que o <p> HERDA a cor do
+   footer: a disputa real é entre as duas .rodape-site (casos.css
+   e estilo.css), e a do casos.css venceu por vir depois. A regra
+   footer p não apareceu aplicada ao <p>. Onde errei: comparei a
+   especificidade de dois seletores que miram elementos diferentes
+   (.rodape-site no footer, footer p no p). Eles não competem no
+   mesmo elemento. */
 .rodape-site {
   color: var(--cor-marca);
 }
