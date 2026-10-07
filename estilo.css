@@ -146,3 +146,69 @@ p {
   padding: var(--espaco-3);
   max-width: 68ch;
 }
+/* Tabela de safra */
+
+.tabela-safra th,
+.tabela-safra td {
+  padding: var(--espaco-2);
+}
+
+.tabela-safra thead th {
+  background-color: var(--cor-marca);
+  color: var(--cor-sobre-marca);
+}
+
+.tabela-safra tbody td {
+  background-color: var(--cor-superficie);
+}
+
+/* Formulário de cadastro */
+
+.formulario-cadastro fieldset {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: var(--espaco-3);
+  margin-bottom: var(--espaco-3);
+}
+
+.formulario-cadastro fieldset fieldset {
+  border: none;
+  padding: 0;
+}
+
+.formulario-cadastro legend {
+  font-weight: bold;
+  color: var(--cor-marca);
+}
+
+.formulario-cadastro input[type="text"],
+.formulario-cadastro input[type="email"],
+.formulario-cadastro input[type="tel"],
+.formulario-cadastro input[type="number"],
+.formulario-cadastro input[type="date"],
+.formulario-cadastro select,
+.formulario-cadastro textarea {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 0.5em;
+  background-color: var(--cor-superficie);
+}
+
+/* Sobre */
+
+blockquote {
+  color: var(--cor-texto-suave);
+  padding-left: var(--espaco-3);
+}
+
+dt {
+  font-weight: bold;
+}
+
+.pergunta {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: var(--espaco-3);
+  margin-bottom: var(--espaco-2);
+  max-width: 68ch;
+}
