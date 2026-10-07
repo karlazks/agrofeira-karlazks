@@ -1,0 +1,61 @@
+/* Página inteira */
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+}
+
+/* Conteúdo principal e relacionado */
+
+main,
+aside {
+  padding: var(--espaco-4) var(--espaco-3);
+}
+
+/* Os três níveis de título */
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--tamanho-h1);
+}
+
+h2 {
+  font-size: var(--tamanho-h2);
+}
+
+h3 {
+  font-size: var(--tamanho-h3);
+}
+
+/* Títulos de segundo e terceiro nível na cor da marca */
+
+h2,
+h3 {
+  color: var(--cor-marca);
+}
+
+/* Ritmo vertical */
+
+h2,
+h3 {
+  margin-top: var(--espaco-4);
+  margin-bottom: var(--espaco-2);
+}
+
+p {
+  margin-bottom: var(--espaco-3);
+}
+
+/* Medida da linha */
+
+p {
+  max-width: 68ch;
+}
