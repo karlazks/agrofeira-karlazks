@@ -2,10 +2,10 @@
   /* Cores */
   --cor-fundo: #eef0f3;
   --cor-superficie: #ffffff;
-  --cor-texto: #1f2328;
-  --cor-texto-suave: #5b6670;
-  --cor-marca: #8b3a2f;
-  --cor-sobre-marca: #ffffff;
+  --cor-texto: #1f2328;        /* sobre fundo: 13.83:1 (AA/AAA) — sobre superfície: 15.79:1 (AA/AAA) */
+  --cor-texto-suave: #5b6670;  /* sobre fundo: 5.13:1 (AA) */
+  --cor-marca: #8b3a2f;        /* sobre fundo: 6.7:1 (AA/AAA) */
+  --cor-sobre-marca: #ffffff;  /* sobre marca: 7.65:1 (AA/AAA) */
   --cor-borda: #d5d8dd;
 
   /* Letras */
