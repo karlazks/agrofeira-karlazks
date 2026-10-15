@@ -37,4 +37,14 @@
   .rodape-site {
     grid-area: rodape;
   }
+  
+    @media (min-width: 48rem) {
+    body {
+      grid-template-areas:
+        "cabecalho cabecalho"
+        "conteudo lateral"
+        "rodape rodape";
+      grid-template-columns: minmax(0, 1fr) minmax(15rem, 20rem);
+    }
+  }
 }
