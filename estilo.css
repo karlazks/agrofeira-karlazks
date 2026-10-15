@@ -248,3 +248,51 @@ main .cartao-produto {
   margin-bottom: 0;
   max-width: none;
 }
+
+/* Permite que o cartão responda ao espaço disponível */
+.cartao-produto {
+  container-type: inline-size;
+}
+
+/* Quando o cartão tiver espaço suficiente */
+@container (min-width: 24rem) {
+  .cartao-produto h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Link para pular direto ao conteúdo */
+.pular {
+  position: absolute;
+  left: -9999px;
+}
+
+.pular:focus {
+  left: var(--espaco-3);
+  top: var(--espaco-3);
+  z-index: 1000;
+  padding: var(--espaco-2);
+  background: var(--cor-superficie);
+  color: var(--cor-texto);
+}
+
+/* Destaque visível ao navegar pelo teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--cor-marca);
+  outline-offset: 3px;
+}
+
+/* Escurece os botões ao passar o mouse */
+.barra-categorias button:hover,
+.busca button:hover,
+.formulario-cadastro button:hover {
+  filter: brightness(0.85);
+}
+
+/* Destaca o cartão quando um link dentro dele recebe foco */
+.cartao-produto:has(a:focus-visible) {
+  outline: 3px solid var(--cor-marca);
+  outline-offset: 2px;
+}
