@@ -276,41 +276,29 @@ main .cartao-produto {
   }
 }
 
-/* Pular direto ao conteúdo */
-.pular {
-  position: fixed;
-  top: var(--espaco-3);
-  left: -9999px;
-  z-index: 1000;
-}
-
-.pular:focus-visible {
-  left: var(--espaco-3);
-  top: var(--espaco-3);
-  z-index: 1000;
-  padding: var(--espaco-2);
-  background: var(--cor-superficie);
-  color: var(--cor-texto);
-}
-
-/* Destaque visível*/
-a:focus-visible,
-button:focus-visible,
-input:focus-visible {
-  outline: 3px solid var(--cor-marca);
+/* Foco visível por teclado em todos os elementos */
+:focus-visible {
+  outline: 3px solid var(--cor-foco);
   outline-offset: 3px;
 }
 
-/* Escurece os botões - mouse */
+/* Contraste do foco sobre o cabeçalho e o menu */
+.cabecalho-site :focus-visible,
+body > nav :focus-visible {
+  outline-color: var(--cor-sobre-marca);
+}
+
+/* Escurece os botões ao passar o mouse */
 .barra-categorias button:hover,
 .busca button:hover,
 .formulario-cadastro button:hover {
-  filter: brightness(0.85);
+  background-color: var(--cor-marca-forte);
 }
 
 /* Destaca o cartão */
-.cartao-produto:has(a:focus-visible) {
-  outline: 3px solid var(--cor-marca);
+/* :has() — destaca o cartão quando seu botão recebe foco */
+.cartao-produto:has(button:focus-visible) {
+  outline: 3px solid var(--cor-foco);
   outline-offset: 2px;
 }
 
