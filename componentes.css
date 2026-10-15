@@ -107,8 +107,7 @@ p {
   border-radius: var(--raio);
   box-shadow: var(--sombra);
   padding: var(--espaco-3);
-  margin-bottom: var(--espaco-3);
-  max-width: 30rem;
+  container-type: inline-size;
 }
 
 /* Legenda da figura */
@@ -225,12 +224,10 @@ dt {
 /* Catálogo com CSS Grid */
 main .lista-produtos {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(100%, 15rem), 1fr)
-  );
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: var(--espaco-3);
 }
+
 
 /* Evita espaço extra cartões */
 main .cartao-produto {
