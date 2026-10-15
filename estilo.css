@@ -231,7 +231,7 @@ main .lista-produtos {
   gap: var(--espaco-3);
 }
 
-/* Evita espaço extra entre os cartões */
+/* Evita espaço extra cartões */
 main .cartao-produto {
   margin-bottom: 0;
   max-width: none;
@@ -249,19 +249,17 @@ main .cartao-produto {
   max-width: none;
 }
 
-/* Permite que o cartão responda ao espaço disponível */
 .cartao-produto {
   container-type: inline-size;
 }
 
-/* Quando o cartão tiver espaço suficiente */
 @container (min-width: 24rem) {
   .cartao-produto h3 {
     font-size: 1.5rem;
   }
 }
 
-/* Link para pular direto ao conteúdo */
+/* Pular direto ao conteúdo */
 .pular {
   position: absolute;
   left: -9999px;
@@ -276,7 +274,7 @@ main .cartao-produto {
   color: var(--cor-texto);
 }
 
-/* Destaque visível ao navegar pelo teclado */
+/* Destaque visível*/
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
@@ -284,15 +282,39 @@ input:focus-visible {
   outline-offset: 3px;
 }
 
-/* Escurece os botões ao passar o mouse */
+/* Escurece os botões - mouse */
 .barra-categorias button:hover,
 .busca button:hover,
 .formulario-cadastro button:hover {
   filter: brightness(0.85);
 }
 
-/* Destaca o cartão quando um link dentro dele recebe foco */
+/* Destaca o cartão */
 .cartao-produto:has(a:focus-visible) {
   outline: 3px solid var(--cor-marca);
   outline-offset: 2px;
+}
+
+.barra-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+main .lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+main .lista-produtos .produto {
+  margin: 0;
+  max-width: none;
+}
+
+@media (min-width: 48rem) {
+  main .lista-produtos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
