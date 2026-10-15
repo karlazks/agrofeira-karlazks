@@ -251,7 +251,8 @@ main .cartao-produto {
   container-type: inline-size;
 }
 
-/* Container query*/
+/* Container query — quando o cartão tem largura suficiente, a imagem fica à esquerda e as informações ficam empilhadas à direita. */
+
 @container (min-width: 30rem) {
   .cartao-produto article {
     display: grid;
