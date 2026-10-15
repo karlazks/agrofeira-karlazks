@@ -4,6 +4,15 @@
     background: var(--cor-fundo);
     color: var(--cor-texto);
     font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .pagina-catalogo {
     display: grid;
     grid-template-areas:
       "cabecalho"
@@ -15,19 +24,32 @@
     gap: var(--espaco-3);
   }
 
-  img { max-width: 100%; height: auto; }
-  .cabecalho-site { grid-area: cabecalho; }
-  body > nav {
+  .cabecalho-site {
+    grid-area: cabecalho;
+  }
+
+  .pagina-catalogo > nav {
     grid-area: menu;
     background: var(--cor-marca);
     padding: var(--espaco-3);
   }
-  main { grid-area: conteudo; min-width: 0; }
-  .lateral { grid-area: lateral; min-width: 0; }
-  .rodape-site { grid-area: rodape; }
+
+  .pagina-catalogo > main {
+    grid-area: conteudo;
+    min-width: 0;
+  }
+
+  .pagina-catalogo .lateral {
+    grid-area: lateral;
+    min-width: 0;
+  }
+
+  .rodape-site {
+    grid-area: rodape;
+  }
 
   @media (min-width: 60rem) {
-    body {
+    .pagina-catalogo {
       grid-template-areas:
         "cabecalho cabecalho cabecalho"
         "menu conteudo lateral"
