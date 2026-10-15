@@ -280,11 +280,13 @@ main .cartao-produto {
 
 /* Pular direto ao conteúdo */
 .pular {
-  position: absolute;
+  position: fixed;
+  top: var(--espaco-3);
   left: -9999px;
+  z-index: 1000;
 }
 
-.pular:focus {
+.pular:focus-visible {
   left: var(--espaco-3);
   top: var(--espaco-3);
   z-index: 1000;
