@@ -212,3 +212,39 @@ dt {
   margin-bottom: var(--espaco-2);
   max-width: 68ch;
 }
+
+/* Barra de categorias com Flexbox */
+.barra-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2);
+  margin-bottom: var(--espaco-3);
+}
+
+/* Catálogo com CSS Grid */
+main .lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 15rem), 1fr)
+  );
+  gap: var(--espaco-3);
+}
+
+/* Evita espaço extra entre os cartões */
+main .cartao-produto {
+  margin-bottom: 0;
+  max-width: none;
+}
+
+/* Lateral em uma coluna */
+.lateral .lista-produtos {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espaco-3);
+}
+
+.lateral .cartao-produto {
+  margin-bottom: 0;
+  max-width: none;
+}
