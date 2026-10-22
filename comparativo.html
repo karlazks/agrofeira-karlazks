@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Comparativo — AgroFeira (Karla Geovanna)</title>
-  
-  <!-- MANTENHA AS SUAS FOLHAS DE ESTILO AUTORAIS AQUI (NÃO COLOQUE O BOOTSTRAP) -->
+
   <link rel="stylesheet" href="camadas.css">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="tokens.css">
@@ -16,10 +15,8 @@
 <body>
   
   <!-- ============================================== -->
-  <!-- COPIE O LINK DE PULAR E O CABEÇALHO DO SEU SOBRE.HTML AQUI -->
   <a href="#conteudo" class="pular">Pular para o conteúdo</a>
   <header class="cabecalho">
-    <!-- Seu menu aqui. REMOVA O aria-current do link se houver! -->
   </header>
   <!-- ============================================== -->
 
@@ -39,13 +36,11 @@
     <p>Em 360 px, o catálogo em Bootstrap apresenta 1 coluna de cartões, a lista "Mais pedidos" não aparece e o teste de rolagem retornou <code>false</code>. Em 768 px, há 2 colunas de cartões, a lista "Mais pedidos" não aparece e o teste de rolagem retornou <code>false</code>. Em 1200 px, há 3 colunas de cartões, a lista "Mais pedidos" aparece à direita e o teste de rolagem retornou <code>false</code>.</p>
 
     <figure>
-      <!-- ATUALIZE O WIDTH E O HEIGHT COM O TAMANHO REAL DA SUA IMAGEM -->
       <img src="captura-1-360.png" alt="Catálogo em Bootstrap em 360 px" width="800" height="600">
       <figcaption>Captura 1 — Catálogo em 360 px.</figcaption>
     </figure>
 
     <figure>
-      <!-- ATUALIZE O WIDTH E O HEIGHT -->
       <img src="captura-2-1200-antes.png" alt="Catálogo em Bootstrap em 1200 px antes da customização" width="1200" height="800">
       <figcaption>Captura 2 — Catálogo em 1200 px (antes).</figcaption>
     </figure>
@@ -103,7 +98,6 @@
     <p><strong>Por que a --bs-primary sozinha, no :root, não muda o botão:</strong> No F12, ao inspecionar o botão (Captura 3), vimos que a regra <code>.btn-primary</code> define as próprias variáveis locais, como <code>--bs-btn-bg: #0d6efd</code>. O botão lê essa variável local com valor fixo, e não a variável global <code>--bs-primary</code> do <code>:root</code>. Por isso, alterar apenas a primária não reflete no botão sem sobrescrever a variável específica dele.</p>
 
     <figure>
-      <!-- ATUALIZE O WIDTH E O HEIGHT -->
       <img src="captura-3-regra-botao.png" alt="Painel Styles mostrando a regra .btn-primary e a variável --bs-btn-bg" width="800" height="600">
       <figcaption>Captura 3 — Regra .btn-primary no painel Styles.</figcaption>
     </figure>
@@ -117,7 +111,6 @@
     </ul>
 
     <figure>
-      <!-- ATUALIZE O WIDTH E O HEIGHT -->
       <img src="captura-4-1200-depois.png" alt="Catálogo em Bootstrap em 1200 px depois da customização" width="1200" height="800">
       <figcaption>Captura 4 — Catálogo em 1200 px (depois).</figcaption>
     </figure>
@@ -179,25 +172,21 @@
     </table>
 
     <figure>
-      <!-- ATUALIZE O WIDTH E O HEIGHT -->
       <img src="captura-5-rede-autoral.png" alt="Aba Network do catálogo autoral" width="1200" height="800">
       <figcaption>Captura 5 — Network do catálogo autoral.</figcaption>
     </figure>
 
     <figure>
-      <!-- ATUALIZE O WIDTH E O HEIGHT -->
       <img src="captura-6-rede-bootstrap.png" alt="Aba Network do catálogo Bootstrap" width="1200" height="800">
       <figcaption>Captura 6 — Network do catálogo Bootstrap.</figcaption>
     </figure>
 
     <figure>
-      <!-- ATUALIZE O WIDTH E O HEIGHT -->
       <img src="captura-7-lcp-autoral.png" alt="Painel Performance do catálogo autoral" width="1200" height="800">
       <figcaption>Captura 7 — LCP do catálogo autoral.</figcaption>
     </figure>
 
     <figure>
-      <!-- ATUALIZE O WIDTH E O HEIGHT -->
       <img src="captura-8-lcp-bootstrap.png" alt="Painel Performance do catálogo Bootstrap" width="1200" height="800">
       <figcaption>Captura 8 — LCP do catálogo Bootstrap.</figcaption>
     </figure>
@@ -219,12 +208,11 @@
 
   </main>
 
-  <!-- ============================================== -->
-  <!-- COPIE O RODAPÉ DO SEU SOBRE.HTML AQUI -->
+   <!-- ============================================== -->
   <footer class="rodape">
-    <!-- Seus créditos e informações de rodapé aqui -->
+    <p>AgroFeira — Produtos frescos direto das colônias de Paragominas.</p>
+    <p>Fotos: Acervo pessoal da autora (ou a fonte que você usou).</p>
   </footer>
   <!-- ============================================== -->
-
 </body>
 </html>
