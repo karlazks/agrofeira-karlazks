@@ -1,115 +1,21 @@
 :root {
-  --cor-marca: #285943;
-  --cor-marca-escura: #193d2e;
-  --cor-fundo: #f7f5ed;
-  --cor-texto: #282d27;
-  --cor-destaque: #e7c66b;
-  --cor-borda: #d9dfd3;
+  --bs-primary-rgb: var(--cor-marca-rgb);
+  --bs-body-bg: var(--cor-fundo);
+  --bs-body-color: var(--cor-texto);
+  --bs-border-color: var(--cor-borda);
+  --bs-border-radius: var(--raio);
+  --bs-link-color-rgb: var(--cor-marca-rgb);
+  --bs-link-hover-color-rgb: var(--cor-marca-forte-rgb);
 }
 
-body {
-  background: var(--cor-fundo);
-  color: var(--cor-texto);
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 1rem;
-  z-index: 1000;
-  padding: .75rem 1rem;
-  background: white;
-  color: var(--cor-marca-escura);
-}
-
-.skip-link:focus {
-  top: 1rem;
-}
-
-.site-header {
-  background: var(--cor-marca);
-  color: white;
-}
-
-.site-navbar {
-  background: var(--cor-marca-escura);
-}
-
-.section-title {
-  color: var(--cor-marca-escura);
-  font-weight: 700;
-}
-
-.btn-category {
-  border: 1px solid var(--cor-marca);
-  color: var(--cor-marca-escura);
-  background: white;
-}
-
-.btn-category:hover,
-.btn-category:focus,
-.btn-category.active {
-  background: var(--cor-marca);
-  color: white;
-}
-
-.product-card {
-  overflow: hidden;
-  border: 1px solid var(--cor-borda);
-  border-radius: .75rem;
-  background: white;
-  box-shadow: 0 .2rem .7rem rgb(0 0 0 / 8%);
-}
-
-.product-image {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.product-card .card-title {
-  color: var(--cor-marca-escura);
-  font-weight: 700;
-}
-
-.producer {
-  color: #555e54;
-  font-size: .95rem;
-}
-
-.price {
-  color: var(--cor-marca);
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.btn-add {
-  background: var(--cor-marca);
-  color: white;
-  border: 1px solid var(--cor-marca);
-}
-
-.btn-add:hover,
-.btn-add:focus {
-  background: var(--cor-marca-escura);
-  border-color: var(--cor-marca-escura);
-  color: white;
-}
-
-.site-footer {
-  margin-top: 2rem;
-  background: var(--cor-marca-escura);
-  color: white;
-}
-
-.credits {
-  font-size: .85rem;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--cor-destaque);
-  outline-offset: 3px;
+.btn-primary {
+  --bs-btn-color: var(--cor-sobre-marca);
+  --bs-btn-bg: var(--cor-marca);
+  --bs-btn-border-color: var(--cor-marca);
+  --bs-btn-hover-color: var(--cor-sobre-marca);
+  --bs-btn-hover-bg: var(--cor-marca-forte);
+  --bs-btn-hover-border-color: var(--cor-marca-forte);
+  --bs-btn-active-color: var(--cor-sobre-marca);
+  --bs-btn-active-bg: var(--cor-marca-forte);
+  --bs-btn-active-border-color: var(--cor-marca-forte);
 }

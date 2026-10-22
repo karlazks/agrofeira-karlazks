@@ -5,10 +5,12 @@
     --cor-superficie: #ffffff;
     --cor-texto: #1f2328;
     --cor-texto-suave: #5b6670;
-    --cor-marca: #8b3a2f; /* Marca/texto branco: 7,65:1. */
+    --cor-marca: #8b3a2f;
+  --cor-marca-rgb: 139, 58, 47; /* Marca/texto branco: 7,65:1. */
     --cor-sobre-marca: #ffffff;
     --cor-borda: #d5d8dd;
-    --cor-marca-forte: #64251e; /* Hover/texto branco: 11,51:1. */
+    --cor-marca-forte: #64251e;
+  --cor-marca-forte-rgb: 100, 37, 30; /* Hover/texto branco: 11,51:1. */
     --cor-foco: #005fcc; /* Foco/superfície branca: 5,98:1. */
     --fonte-texto: system-ui, sans-serif;
     --fonte-titulo: "Lora", serif;
@@ -31,10 +33,12 @@
       --cor-superficie: #24272b;
       --cor-texto: #f2f4f7;
       --cor-texto-suave: #c1c9d2;
-      --cor-marca: #e6a095; /* Marca/texto escuro: 8,51:1. */
+      --cor-marca: #e6a095;
+   --cor-marca-rgb: 230, 160, 149; /* Marca/texto escuro: 8,51:1. */
       --cor-sobre-marca: #24100d;
       --cor-borda: #555d66;
-      --cor-marca-forte: #f3b7ac; /* Hover/texto escuro: 10,55:1. */
+      --cor-marca-forte: #f3b7ac;
+   --cor-marca-forte-rgb: 243, 183, 172; /* Hover/texto escuro: 10,55:1. */
       --cor-foco: #8ec5ff; /* Foco/superfície escura: 8,27:1. */
     }
   }
