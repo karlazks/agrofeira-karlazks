@@ -3,45 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comparativo — AgroFeira</title>
-  <link rel="stylesheet" href="comparativo.css">
+  <title>Comparativo — AgroFeira (Karla Geovanna)</title>
+  
+  <!-- MANTENHA AS SUAS FOLHAS DE ESTILO AUTORAIS AQUI (NÃO COLOQUE O BOOTSTRAP) -->
+  <link rel="stylesheet" href="camadas.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="componentes.css">
+  <link rel="stylesheet" href="utilitarios.css">
 </head>
 <body>
-  <main>
-    <h1>Comparativo: CSS autoral e Bootstrap</h1>
+  
+  <!-- ============================================== -->
+  <!-- COPIE O LINK DE PULAR E O CABEÇALHO DO SEU SOBRE.HTML AQUI -->
+  <a href="#conteudo" class="pular">Pular para o conteúdo</a>
+  <header class="cabecalho">
+    <!-- Seu menu aqui. REMOVA O aria-current do link se houver! -->
+  </header>
+  <!-- ============================================== -->
 
-    <p>
-      Este relatório compara o catálogo original da AgroFeira,
-      estilizado com CSS próprio, com uma segunda versão que utiliza
-      Bootstrap 5.3.8. A comparação considera transferência de dados,
-      desempenho, quantidade de CSS e estrutura do cartão de açaí.
-    </p>
+  <main id="conteudo">
+    <h2>Comparativo: o catálogo autoral e o catálogo em Bootstrap</h2>
 
-    <h2>1. Metodologia</h2>
-    <p>
-      As páginas foram testadas no Chrome, com a área de visualização
-      de 800 × 1280 px. Para as medições de rede, o cache foi desativado.
-      Para o LCP, o cache de rede foi desativado e CPU e rede ficaram
-      em No throttling. O LCP foi medido cinco vezes por página; a
-      mediana corresponde ao terceiro valor após ordenar os resultados.
-    </p>
+    <!-- INFORMAÇÕES INICIAIS -->
+    <p><strong>Aluna:</strong> Karla Geovanna Almeida de Sousa. Matrícula: [Sua Matrícula]</p>
+    <p><strong>Repositório:</strong> <a href="https://github.com/karlazks/agrofeira-karlazks">https://github.com/karlazks/agrofeira-karlazks</a></p>
+    <p><strong>Endereços do site:</strong></p>
+    <ul>
+      <li>Catálogo autoral: <a href="https://karlazks.github.io/agrofeira-karlazks/catalogo.html">https://karlazks.github.io/agrofeira-karlazks/catalogo.html</a></li>
+      <li>Catálogo em Bootstrap: <a href="https://karlazks.github.io/agrofeira-karlazks/catalogo-bootstrap.html">https://karlazks.github.io/agrofeira-karlazks/catalogo-bootstrap.html</a></li>
+    </ul>
 
-    <h2>2. Medições</h2>
+    <h3>0 catálogo em três larguras</h3>
+    <p>Em 360 px, o catálogo em Bootstrap apresenta 1 coluna de cartões, a lista "Mais pedidos" não aparece e o teste de rolagem retornou <code>false</code>. Em 768 px, há 2 colunas de cartões, a lista "Mais pedidos" não aparece e o teste de rolagem retornou <code>false</code>. Em 1200 px, há 3 colunas de cartões, a lista "Mais pedidos" aparece à direita e o teste de rolagem retornou <code>false</code>.</p>
 
-    <table>
-      <caption>Comparação das duas versões do catálogo</caption>
+    <figure>
+      <!-- ATUALIZE O WIDTH E O HEIGHT COM O TAMANHO REAL DA SUA IMAGEM -->
+      <img src="captura-1-360.png" alt="Catálogo em Bootstrap em 360 px" width="800" height="600">
+      <figcaption>Captura 1 — Catálogo em 360 px.</figcaption>
+    </figure>
+
+    <figure>
+      <!-- ATUALIZE O WIDTH E O HEIGHT -->
+      <img src="captura-2-1200-antes.png" alt="Catálogo em Bootstrap em 1200 px antes da customização" width="1200" height="800">
+      <figcaption>Captura 2 — Catálogo em 1200 px (antes).</figcaption>
+    </figure>
+
+    <h3>1. A customização</h3>
+    
+    <table class="tabela-safra">
+      <caption>Variáveis do Bootstrap alteradas e seus efeitos</caption>
+      <thead>
+        <tr>
+          <th scope="col">Variável alterada</th>
+          <th scope="col">Valor (Token)</th>
+          <th scope="col">Por quê</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">--bs-body-bg</th>
+          <td>var(--cor-fundo)</td>
+          <td>Muda o fundo da página, dos cartões e da lista "Mais pedidos" de branco para a cor do projeto.</td>
+        </tr>
+        <tr>
+          <th scope="row">--bs-body-color</th>
+          <td>var(--cor-texto)</td>
+          <td>Altera a cor padrão do texto do corpo de cinza-escuro para a cor definida no projeto.</td>
+        </tr>
+        <tr>
+          <th scope="row">--bs-link-color-rgb e --bs-link-hover-color-rgb</th>
+          <td>var(--cor-marca-rgb) e var(--cor-marca-forte-rgb)</td>
+          <td>Muda a cor do link "Início" de azul para a cor da marca e sua variação no hover.</td>
+        </tr>
+        <tr>
+          <th scope="row">--bs-border-radius</th>
+          <td>var(--raio)</td>
+          <td>Altera os cantos arredondados padrão (0.375rem) do cartão, do alerta e do botão.</td>
+        </tr>
+        <tr>
+          <th scope="row">--bs-btn-bg, --bs-btn-border-color</th>
+          <td>var(--cor-marca)</td>
+          <td>Muda o fundo e a borda do botão "Adicionar" de azul para a cor da marca.</td>
+        </tr>
+        <tr>
+          <th scope="row">--bs-btn-hover-bg, --bs-btn-hover-border-color</th>
+          <td>var(--cor-marca-forte)</td>
+          <td>Altera a cor do botão quando o ponteiro do mouse passa por cima.</td>
+        </tr>
+        <tr>
+          <th scope="row">--bs-btn-color</th>
+          <td>var(--cor-sobre-marca)</td>
+          <td>Garante que o texto do botão seja legível (branco) nos estados normal, hover e ativo.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Por que a --bs-primary sozinha, no :root, não muda o botão:</strong> No F12, ao inspecionar o botão (Captura 3), vimos que a regra <code>.btn-primary</code> define as próprias variáveis locais, como <code>--bs-btn-bg: #0d6efd</code>. O botão lê essa variável local com valor fixo, e não a variável global <code>--bs-primary</code> do <code>:root</code>. Por isso, alterar apenas a primária não reflete no botão sem sobrescrever a variável específica dele.</p>
+
+    <figure>
+      <!-- ATUALIZE O WIDTH E O HEIGHT -->
+      <img src="captura-3-regra-botao.png" alt="Painel Styles mostrando a regra .btn-primary e a variável --bs-btn-bg" width="800" height="600">
+      <figcaption>Captura 3 — Regra .btn-primary no painel Styles.</figcaption>
+    </figure>
+
+    <p><strong>O antes e o depois:</strong> Comparando a Captura 2 (antes) com a Captura 4 (depois), quatro coisas mudaram:</p>
+    <ul>
+      <li>O fundo da página passou de branco para <code>--cor-fundo</code> e a cor do texto mudou.</li>
+      <li>O botão Adicionar passou de azul (<code>#0d6efd</code>) para <code>--cor-marca</code>, e no hover para <code>--cor-marca-forte</code>.</li>
+      <li>O link "Início" passou de azul (<code>#0d6efd</code>) para <code>--cor-marca</code>.</li>
+      <li>Os cantos do cartão, do alerta e do botão passaram de <code>0.375rem</code> (6 px) para o valor de <code>--raio</code>.</li>
+    </ul>
+
+    <figure>
+      <!-- ATUALIZE O WIDTH E O HEIGHT -->
+      <img src="captura-4-1200-depois.png" alt="Catálogo em Bootstrap em 1200 px depois da customização" width="1200" height="800">
+      <figcaption>Captura 4 — Catálogo em 1200 px (depois).</figcaption>
+    </figure>
+
+    <h3>2. As medições</h3>
+    <p>As medições foram realizadas no Chrome, nos endereços públicos, com as caixas <strong>Disable cache</strong> (aba Network) e <strong>Disable network cache</strong> (aba Performance) marcadas. A largura e a altura da área da página, obtidas via Console, foram de <strong>800 × 1280 px</strong> para ambas as páginas.</p>
+
+    <table class="tabela-safra">
+      <caption>Comparação de métricas entre as versões autoral e Bootstrap</caption>
       <thead>
         <tr>
           <th scope="col">Critério</th>
-          <th scope="col">CSS autoral</th>
+          <th scope="col">Autoral</th>
           <th scope="col">Bootstrap</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">CSS transferido</th>
-          <td>14,0 kB (inclui 1,6 kB do CSS do Google Fonts)</td>
-          <td>35,3 kB (33,8 + 0,731 + 0,800 kB)</td>
+          <td>14,0 kB (inclui 1,6 kB do Google Fonts)</td>
+          <td>35,3 kB (33,8 + 0,7 + 0,8 kB)</td>
         </tr>
         <tr>
           <th scope="row">Fontes</th>
@@ -60,11 +157,11 @@
         </tr>
         <tr>
           <th scope="row">Total transferido</th>
-          <td>472 kB</td>
-          <td>476 kB</td>
+          <td>472 kB (inclui favicon)</td>
+          <td>476 kB (inclui favicon)</td>
         </tr>
         <tr>
-          <th scope="row">LCP mediano</th>
+          <th scope="row">LCP (valor do meio)</th>
           <td>0,53 s (0,51; 0,66; 0,35; 0,53; 0,55 s)</td>
           <td>0,68 s (1,80; 0,64; 0,69; 0,68; 0,45 s)</td>
         </tr>
@@ -74,105 +171,60 @@
           <td>156 (41 + 115)</td>
         </tr>
         <tr>
-          <th scope="row">Cartão de açaí</th>
-          <td>7 elementos; 4 nomes de classe distintos</td>
-          <td>8 elementos; 16 nomes de classe distintos, sem contar o selo</td>
+          <th scope="row">Classes no cartão do açaí</th>
+          <td>7 elementos; 4 classes</td>
+          <td>8 elementos; 16 classes (sem o selo) / 19 (com o selo)</td>
         </tr>
       </tbody>
     </table>
 
-    <h2>3. Leitura dos números</h2>
-
-    <p>
-      <strong>Os bytes.</strong> O Bootstrap transferiu 35,3 kB de CSS,
-      contra 14,0 kB da versão autoral. Entretanto, a versão autoral
-      carregou 38,3 kB de fonte, enquanto a versão Bootstrap não
-      transferiu arquivos de fonte nessa medição. O total da rede foi
-      de 472 kB na versão autoral e 476 kB na versão Bootstrap.
-      Portanto, o CSS do framework é maior, mas o total transferido
-      depende também dos demais recursos carregados.
-    </p>
-
-    <p>
-      <strong>O desempenho.</strong> O LCP mediano foi de 0,53 s na
-      versão autoral e 0,68 s na versão Bootstrap. Nestas medições,
-      o catálogo autoral apresentou o menor valor mediano. Isso não
-      prova que uma implementação será sempre mais rápida: o resultado
-      pode variar conforme o dispositivo, a rede, o cache e o conteúdo
-      visível na página.
-    </p>
-
-    <p>
-      <strong>O tamanho do documento e o CSS próprio.</strong> O HTML
-      Bootstrap transferiu 2,4 kB, enquanto o original transferiu
-      8,5 kB. O CSS próprio somou 156 linhas na versão Bootstrap,
-      considerando tokens.css e agrofeira-bootstrap.css, contra 483
-      linhas na versão autoral. A redução foi de 327 linhas, cerca de
-      67,7%. Isso reduz a quantidade de CSS mantido diretamente no
-      projeto, mas não inclui as 33,8 kB do arquivo externo do Bootstrap.
-    </p>
-
-    <p>
-      <strong>Limites da medição.</strong> Os resultados descrevem
-      apenas as duas páginas e as condições testadas. O total de
-      transferência não mede, sozinho, a facilidade de manutenção,
-      a acessibilidade ou o tempo necessário para personalizar os
-      componentes. O LCP também é apenas uma métrica de desempenho.
-      A quantidade de requisições, isoladamente, não serve como
-      critério para decidir qual versão é melhor.
-    </p>
-
-    <h2>4. Capturas de tela</h2>
-    <p>Inclua as oito capturas abaixo, com legendas que indiquem o que cada uma comprova.</p>
-
     <figure>
-      <img src="captura-1-360.png" alt="Catálogo Bootstrap em viewport de 360 pixels">
-      <figcaption>Captura 1 — Catálogo em 360 px.</figcaption>
+      <!-- ATUALIZE O WIDTH E O HEIGHT -->
+      <img src="captura-5-rede-autoral.png" alt="Aba Network do catálogo autoral" width="1200" height="800">
+      <figcaption>Captura 5 — Network do catálogo autoral.</figcaption>
     </figure>
 
     <figure>
-      <img src="captura-2-768.png" alt="Catálogo Bootstrap em viewport de 768 pixels">
-      <figcaption>Captura 2 — Catálogo em 768 px.</figcaption>
+      <!-- ATUALIZE O WIDTH E O HEIGHT -->
+      <img src="captura-6-rede-bootstrap.png" alt="Aba Network do catálogo Bootstrap" width="1200" height="800">
+      <figcaption>Captura 6 — Network do catálogo Bootstrap.</figcaption>
     </figure>
 
     <figure>
-      <img src="captura-3-1200.png" alt="Catálogo Bootstrap em viewport de 1200 pixels">
-      <figcaption>Captura 3 — Catálogo em 1200 px.</figcaption>
+      <!-- ATUALIZE O WIDTH E O HEIGHT -->
+      <img src="captura-7-lcp-autoral.png" alt="Painel Performance do catálogo autoral" width="1200" height="800">
+      <figcaption>Captura 7 — LCP do catálogo autoral.</figcaption>
     </figure>
 
     <figure>
-      <img src="captura-4-validacao.png" alt="Resultado do validador HTML">
-      <figcaption>Captura 4 — Validação HTML.</figcaption>
+      <!-- ATUALIZE O WIDTH E O HEIGHT -->
+      <img src="captura-8-lcp-bootstrap.png" alt="Painel Performance do catálogo Bootstrap" width="1200" height="800">
+      <figcaption>Captura 8 — LCP do catálogo Bootstrap.</figcaption>
     </figure>
 
-    <figure>
-      <img src="captura-5-rede-autoral.png" alt="Network do catálogo autoral">
-      <figcaption>Captura 5 — Medições de rede do catálogo autoral.</figcaption>
-    </figure>
+    <h3>3. A leitura dos números</h3>
 
-    <figure>
-      <img src="captura-6-rede-bootstrap.png" alt="Network do catálogo Bootstrap">
-      <figcaption>Captura 6 — Medições de rede do catálogo Bootstrap.</figcaption>
-    </figure>
+    <p><strong>Os bytes.</strong> O Bootstrap transferiu 35,3 kB de CSS, contra 14,0 kB da versão autoral. Isso significa que o framework baixou cerca de 2,5 vezes mais CSS. Se desconsiderarmos a folha do Google Fonts (1,6 kB) do lado autoral, a diferença é ainda maior: o Bootstrap é cerca de 2,8 vezes mais pesado em CSS. Entretanto, o total transferido da página foi praticamente o mesmo (472 kB contra 476 kB) porque as fotos dos produtos são idênticas e dominam o peso. A diferença real no total é que o autoral carrega fontes (38,3 kB) e o Bootstrap não.</p>
 
-    <figure>
-      <img src="captura-7-lcp-autoral.png" alt="Medição LCP do catálogo autoral">
-      <figcaption>Captura 7 — Uma execução de LCP do catálogo autoral.</figcaption>
-    </figure>
+    <p><strong>O LCP.</strong> O valor do meio para a página autoral foi 0,53 s, contra 0,68 s da página em Bootstrap. A variação entre a maior e a menor carga no autoral foi de 0,31 s (0,66 - 0,35) e no Bootstrap foi de 1,35 s (1,80 - 0,45). A diferença entre os dois valores medianos (0,15 s) é menor que a própria variação das cargas, o que significa que os números são próximos demais para afirmar categoricamente qual é mais rápido, pois o LCP mede a página inteira. Além disso, o catálogo autoral baixa fontes do Google e o Bootstrap não, o que influencia a métrica.</p>
 
-    <figure>
-      <img src="captura-8-lcp-bootstrap.png" alt="Medição LCP do catálogo Bootstrap">
-      <figcaption>Captura 8 — Uma execução de LCP do catálogo Bootstrap.</figcaption>
-    </figure>
+    <p><strong>As linhas e as classes.</strong> O CSS autoral tem 483 linhas, contra 156 do Bootstrap. O autor escreveu mais CSS, mas o HTML do Bootstrap precisou de muito mais classes no cartão (16 contra 4). O trabalho de mudar uma decisão global (como a cor do botão) no autoral mora no arquivo de tokens (mudar uma linha); no Bootstrap, mora em aprender o sistema de variáveis para sobrescrever as regras. O total autoral inclui regras de outras páginas no <code>componentes.css</code> (como a barra de busca e a tabela de safra), que o catálogo não usa, enquanto o Bootstrap serve apenas a esta página.</p>
 
-    <h2>5. Conclusão</h2>
-    <p>
-      Eu escolheria o Bootstrap quando a prioridade fosse reduzir o
-      CSS próprio mantido no projeto, que caiu de 483 para 156 linhas,
-      mas avaliaria outra solução quando a prioridade fosse minimizar
-      o CSS transferido, que foi de 14,0 kB na versão autoral contra
-      35,3 kB na versão Bootstrap.
-    </p>
+    <p><strong>O que a medição não mostra.</strong> Os números não revelam o esforço de manutenção futuro, a facilidade de criar novos componentes ou o tempo gasto para personalizar o framework. Também não medem acessibilidade. A contagem de requisições não serve como critério de comparação, pois ter muitas requisições pequenas (Bootstrap) ou poucas e grandes (autoral) não reflete diretamente a experiência do usuário ou o peso real da página.</p>
+
+    <p><strong>Controle e trabalho.</strong> A versão autoral tinha o link de pular, o menu responsivo, a barra de categorias, a <em>container query</em> do cartão e a regra <code>:has()</code> para o foco. Para criar cada um deles, foi necessário escrever o CSS do zero (o menu e a barra exigiram várias linhas no <code>componentes.css</code>). O Bootstrap não traz esses recursos prontos do jeito que o projeto precisava. Para aplicar as cores da marca no Bootstrap, foi necessário entender como as variáveis CSS do framework funcionam (Parte B). Além disso, o Bootstrap decide seus próprios <em>breakpoints</em> e unidades, o que limita o controle fino do layout que tínhamos no CSS autoral.</p>
+
+    <h3>4. Conclusão</h3>
+    <p>Usaria o Bootstrap em um projeto novo onde a prioridade fosse reduzir o CSS próprio (que caiu de 483 para 156 linhas) e a equipe já dominasse o framework; não usaria em um projeto que exige controle minucioso de layout e máxima performance, pois o CSS transferido foi de 14,0 kB no autoral contra 35,3 kB no Bootstrap.</p>
+
   </main>
+
+  <!-- ============================================== -->
+  <!-- COPIE O RODAPÉ DO SEU SOBRE.HTML AQUI -->
+  <footer class="rodape">
+    <!-- Seus créditos e informações de rodapé aqui -->
+  </footer>
+  <!-- ============================================== -->
+
 </body>
 </html>
