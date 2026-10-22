@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Comparativo — AgroFeira (Karla Geovanna)</title>
-
+  
   <link rel="stylesheet" href="camadas.css">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="tokens.css">
@@ -14,16 +14,14 @@
 </head>
 <body>
   
-  <!-- ============================================== -->
   <a href="#conteudo" class="pular">Pular para o conteúdo</a>
+  
   <header class="cabecalho">
   </header>
-  <!-- ============================================== -->
 
   <main id="conteudo">
     <h2>Comparativo: o catálogo autoral e o catálogo em Bootstrap</h2>
 
-    <!-- INFORMAÇÕES INICIAIS -->
     <p><strong>Aluna:</strong> Karla Geovanna Almeida de Sousa. Matrícula: [Sua Matrícula]</p>
     <p><strong>Repositório:</strong> <a href="https://github.com/karlazks/agrofeira-karlazks">https://github.com/karlazks/agrofeira-karlazks</a></p>
     <p><strong>Endereços do site:</strong></p>
@@ -41,7 +39,7 @@
     </figure>
 
     <figure>
-      <img src="captura-2-1200-antes.png" alt="Catálogo em Bootstrap em 1200 px antes da customização" width="1200" height="800">
+      <img src="captura-2-768.png" alt="Catálogo em Bootstrap em 1200 px antes da customização" width="1200" height="800">
       <figcaption>Captura 2 — Catálogo em 1200 px (antes).</figcaption>
     </figure>
 
@@ -98,7 +96,7 @@
     <p><strong>Por que a --bs-primary sozinha, no :root, não muda o botão:</strong> No F12, ao inspecionar o botão (Captura 3), vimos que a regra <code>.btn-primary</code> define as próprias variáveis locais, como <code>--bs-btn-bg: #0d6efd</code>. O botão lê essa variável local com valor fixo, e não a variável global <code>--bs-primary</code> do <code>:root</code>. Por isso, alterar apenas a primária não reflete no botão sem sobrescrever a variável específica dele.</p>
 
     <figure>
-      <img src="captura-3-regra-botao.png" alt="Painel Styles mostrando a regra .btn-primary e a variável --bs-btn-bg" width="800" height="600">
+      <img src="captura-3-1200.png" alt="Painel Styles mostrando a regra .btn-primary e a variável --bs-btn-bg" width="800" height="600">
       <figcaption>Captura 3 — Regra .btn-primary no painel Styles.</figcaption>
     </figure>
 
@@ -111,7 +109,7 @@
     </ul>
 
     <figure>
-      <img src="captura-4-1200-depois.png" alt="Catálogo em Bootstrap em 1200 px depois da customização" width="1200" height="800">
+      <img src="captura-4-validacao.png" alt="Catálogo em Bootstrap em 1200 px depois da customização" width="1200" height="800">
       <figcaption>Captura 4 — Catálogo em 1200 px (depois).</figcaption>
     </figure>
 
@@ -208,11 +206,8 @@
 
   </main>
 
-   <!-- ============================================== -->
   <footer class="rodape">
-    <p>AgroFeira — Produtos frescos direto das colônias de Paragominas.</p>
-    <p>Fotos: Acervo pessoal da autora (ou a fonte que você usou).</p>
   </footer>
-  <!-- ============================================== -->
+
 </body>
 </html>
