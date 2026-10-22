@@ -1,3 +1,4 @@
+@layer reset {
 /* reset.css — AgroFeira, encontro 3 */
 
 /* 1. A largura borda */
@@ -39,4 +40,5 @@ h1,
 h2,
 h3 {
   overflow-wrap: break-word;
+}
 }

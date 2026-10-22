@@ -129,7 +129,8 @@ p {
 /* Os dois botões do site */
 
 .busca button,
-.formulario-cadastro button {
+.formulario-cadastro button,
+.cartao-produto button {
   background-color: var(--cor-marca);
   color: var(--cor-sobre-marca);
   border: none;
@@ -291,7 +292,8 @@ body > nav :focus-visible {
 /* Escurece os botões ao passar o mouse */
 .barra-categorias button:hover,
 .busca button:hover,
-.formulario-cadastro button:hover {
+.formulario-cadastro button:hover,
+.cartao-produto button:hover {
   background-color: var(--cor-marca-forte);
 }
 
